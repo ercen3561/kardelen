@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Barıştın mı?</title>
+
+<style>
+body{
+text-align:center;
+margin-top:100px;
+font-family:Arial;
+}
+
+button{
+padding:15px 25px;
+font-size:18px;
+margin:10px;
+cursor:pointer;
+}
+
+#kacan{
+position:absolute;
+}
+
+img{
+width:200px;
+margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Sevgilinle barıştın mı?</h2>
+
+<button onclick="baristim()">Barıştım ❤️</button>
+<button id="kacan" onclick="kac()">Barışmadım 😅</button>
+
+<div id="foto"></div>
+
+<script>
+
+function baristim(){
+alert("Aferin 😄 Mutluluklar dilerim ❤️");
+}
+
+function kac(){
+var btn=document.getElementById("kacan");
+
+var x=Math.random()*window.innerWidth;
+var y=Math.random()*window.innerHeight;
+
+btn.style.left=x+"px";
+btn.style.top=y+"px";
+
+document.getElementById("foto").innerHTML=
+'<img src="kar.jpg">';
+}
+
+</script>
+
+</body>
+</html>
